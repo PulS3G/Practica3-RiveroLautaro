@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <h1>Trivia Interactiva</h1>
+        
+        <div id="setup-screen">
+            <h3>Selecciona una Categoría para comenzar:</h3>
+            <select id="category-select">
+                <option value="">-- Elige una categoría --</option>
+            </select>
+            <button id="start-btn">Iniciar Juego</button>
+        </div>
+
+        <div id="game-screen" class="hidden">
+            <div id="info-header">
+                <span id="progress">Pregunta 1 de 5</span>
+                <span id="timer">Tiempo: 5s</span>
+            </div>
+            <h2 id="question-text"></h2>
+            <div id="options-container"></div>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h2>Resultado Final</h2>
+            <div id="score-summary"></div>
+            <button id="restart-btn">Reiniciar Juego</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
