@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor ARS/USD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-overlay"></div>
+    <div class="main-container">
+      <header class="header">
+        <h1>DolAr</h1>
+        <p>Pesos Argentinos y Dólares en tiempo real.</p>
+      </header>
+
+      <div class="input-section card-dark">
+        <div class="converter-controls">
+          <div class="input-wrapper">
+            <span id="currency-label" class="currency-symbol">$</span>
+            <input
+              type="number"
+              id="mainInput"
+              placeholder="Monto en ARS"
+              autocomplete="off"
+            />
+          </div>
+          <button
+            id="switchBtn"
+            class="switch-button"
+            title="Cambiar dirección"
+          ></button>
+        </div>
+        <p id="direction-text">Convertir de <b>Pesos</b> a <b>Dólares</b></p>
+        <p id="error-message" class="error-hidden"></p>
+      </div>
+
+      <div id="loading-state" class="loading-container">
+        <div class="spinner"></div>
+        <p>Consultando API...</p>
+      </div>
+
+      <div id="rates-container" class="results-grid hidden"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
